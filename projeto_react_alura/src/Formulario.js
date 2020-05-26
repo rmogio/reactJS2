@@ -108,9 +108,13 @@ class Formulario extends Component{
         </div>
 
         <button 
-          className='waves-effect waves-light btn indigo lighten-2b' 
-          onClick={this.submitForm} 
-          type='button'>Salvar</button>
+          className="btn waves-effect waves-light green lighten-2b" 
+          type="button" 
+          name="action"
+          onClick={this.submitForm}>enviar
+          <i class="material-icons right">send</i>
+        </button>
+
       </form>
     )
   }
