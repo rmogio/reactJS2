@@ -41,7 +41,7 @@ class Tabela extends Component{
       const { autores, removeAutor } = this.props
 
     return(
-      <table className='certered highlight'>
+      <table className='centered highlight'>
         <TableHead/>
         <TableBody autores = {autores} removeAutor = {removeAutor} />
       </table>
