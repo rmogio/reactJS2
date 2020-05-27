@@ -2,7 +2,7 @@ import React, {Fragment, Component} from 'react'
 import Header from './Header'
 import DataTable from './DataTable'
 import ApiService from './ApiService'
-
+import PopUp from './PopUp'
 
 class Autores extends Component{
 
@@ -17,9 +17,14 @@ class Autores extends Component{
 
   componentDidMount(){
     ApiService.ListaNomes()
+      .then(res=>ApiService.TrataErros(res))
       .then(res=>{
-        this.setState({nomes:[...this.state.nomes, ...res.data]})
+        if(res.message === 'success'){
+          this.setState({nomes:[...this.state.nomes, ...res.data]})
+        }
       })
+      .catch(err => PopUp.exibeMensagem('error', 'Erro na comunicação com o banco de dados'))
+
   }
   render(){
     return (
