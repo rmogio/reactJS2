@@ -1,6 +1,6 @@
 import React, {Fragment, Component} from 'react'
-import Header from './Header'
-import DataTable from './DataTable'
+import Header from '../../Components/Header/Header'
+import DataTable from '../../Components/DataTable/DataTable'
 import ApiService from '../../Utils/ApiService'
 import PopUp from '../../Utils/PopUp'
 

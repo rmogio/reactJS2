@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import './Home.css'
-import Header from './Header'
-import Tabela from './Tabela'
-import Form from './Formulario'
+import Header from '../../Components/Header/Header'
+import Tabela from '../../Components/Tabela/Tabela'
+import Form from '../../Components/Formulario/Formulario'
 import PopUp from '../../Utils/PopUp'
 import ApiService from '../../Utils/ApiService'
 
