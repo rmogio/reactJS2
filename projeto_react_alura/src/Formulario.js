@@ -112,7 +112,7 @@ class Formulario extends Component{
           type="button" 
           name="action"
           onClick={this.submitForm}>enviar
-          <i class="material-icons right">send</i>
+          <i className="material-icons right">send</i>
         </button>
 
       </form>

@@ -23,7 +23,7 @@ const TableBody = props => {
         <td>{linha.preco}</td>
         <td><button 
               onClick={() => props.removeAutor(index)} 
-              className='btn-floating waves-effect waves-light red lighten-2b'><i class="medium material-icons">delete</i>
+              className='btn-floating waves-effect waves-light red lighten-2b'><i className="medium material-icons">delete</i>
             </button>
         </td>
       </tr>
