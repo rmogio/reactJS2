@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Sobre from './Sobre'
-import Livros from './Livros'
-import Autores from './Autores'
-import NotFound from './NotFound'
+import Home from './Pages/Home/Home';
+import Sobre from './Pages/Sobre/Sobre'
+import Livros from './Pages/Livros/Livros'
+import Autores from './Pages/Autores/Autores'
+import NotFound from './Pages/NotFound/NotFound'
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
@@ -15,7 +15,7 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path='/' exact={true} component={App}/>
+        <Route path='/' exact={true} component={Home}/>
         <Route path='/sobre' exact={true} component={Sobre}/>
         <Route path='/livros' exact={true} component={Livros}/>
         <Route path='/autores' exact={true} component={Autores}/>

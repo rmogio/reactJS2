@@ -1,8 +1,8 @@
 import React, {Fragment, Component} from 'react'
 import Header from './Header'
 import DataTable from './DataTable'
-import ApiService from './ApiService'
-import PopUp from './PopUp'
+import ApiService from '../../Utils/ApiService'
+import PopUp from '../../Utils/PopUp'
 
 class Autores extends Component{
 
@@ -17,7 +17,6 @@ class Autores extends Component{
 
   componentDidMount(){
     ApiService.ListaNomes()
-      .then(res=>ApiService.TrataErros(res))
       .then(res=>{
         if(res.message === 'success'){
           this.setState({nomes:[...this.state.nomes, ...res.data]})

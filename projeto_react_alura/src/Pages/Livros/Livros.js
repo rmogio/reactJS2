@@ -1,8 +1,8 @@
 import React, {Fragment, Component} from 'react'
 import Header from './Header'
 import DataTable from './DataTable'
-import ApiService from './ApiService'
-import PopUp from './PopUp'
+import ApiService from '../../Utils/ApiService'
+import PopUp from '../../Utils/PopUp'
 
 
 class Livros extends Component{
@@ -18,7 +18,6 @@ class Livros extends Component{
 
   componentDidMount(){
     ApiService.ListaLivros()
-      .then(res=>ApiService.TrataErros(res))
       .then(res=>{
         if(res.message === 'success'){
           this.setState({livros:[...this.state.livros, ...res.data]})
