@@ -1,6 +1,7 @@
 import React, {Fragment, Component} from 'react'
 import Header from './Header'
 import DataTable from './DataTable'
+import ApiService from './ApiService'
 
 
 class Livros extends Component{
@@ -9,35 +10,17 @@ class Livros extends Component{
     super(props)
 
     this.state={
-      livros: [
-        {
-          nome: 'Ricardo',
-          livro: 'Sei la',
-          preco: '1'
-        },
-    
-        {
-          nome: 'Gabi',
-          livro: 'Sei la2',
-          preco: '2'
-        },
-    
-        {
-          nome: 'Amy',
-          livro: 'Roubando',
-          preco: '3'
-        },
-    
-        {
-          nome: 'Luna',
-          livro: 'Petisco',
-          preco: '4'
-        }
-      ],
+      livros: [],
       titulo: 'Livros'
     }
   }
 
+  componentDidMount(){
+    ApiService.ListaLivros()
+      .then(res=>{
+        this.setState({livros:[...this.state.livros, ...res.data]})
+      })
+  }
   render(){
     return (
       <Fragment>
